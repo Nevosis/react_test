@@ -1,3 +1,12 @@
+This project was made thanks to [Brandon Richey tutorial] (part 1 to 4) :
+
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-2-3ad99f38b48d
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-3-322447d14192
+https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-4-9f843c8c1ccc
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

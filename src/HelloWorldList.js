@@ -34,6 +34,7 @@ class HelloWorldList extends Component {
 	render() {
 		return (
 			<div className="HelloWorldList">
+				
 				<AddGreeter addGreeting={this.addGreeting} />
 				{this.renderGreetings()}
 			</div>

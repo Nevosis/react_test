@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
 class HeaderNavBar extends Component {
   constructor(props) {
@@ -17,8 +18,8 @@ class HeaderNavBar extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#">Link</NavItem>
-            <NavItem eventKey={2} href="#">Link</NavItem>
+            <NavItem eventKey={1} href="#"><Link to="/"> CLASSIC</Link></NavItem>
+            <NavItem eventKey={2} href="#"><Link to="/test"> TEST</Link></NavItem>
             <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>

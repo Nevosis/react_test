@@ -1,18 +1,13 @@
 // import React, { Component } from "react";
 import React from "react";
 import "./App.css";
-import HelloWorld from "./HelloWorld";
+import HelloWorldList from "./HelloWorldList";
 
 const App = () => {
-  var name = "Bob";
-  // handleClick = () => {
-  //   name += " Dylan";
-  // };
 
   return (
     <div className="App">
-      <HelloWorld /*onClick={this.handleClick}*/ name={name}/>
-      <HelloWorld name="Dylan"/>
+      <HelloWorldList />
     </div>
   );
 };

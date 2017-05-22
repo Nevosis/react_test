@@ -1,4 +1,4 @@
-This project was made thanks to [Brandon Richey tutorial] (part 1 to 4) :
+This project was made thanks to [Brandon Richey tutorial](https://medium.com/@diamondgfx) (part 1 to 4) :
 
 https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc
 https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-2-3ad99f38b48d

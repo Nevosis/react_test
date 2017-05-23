@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import log from "./utils/log";
-import HelloWorldList from "./HelloWorldList";
+import HelloWorldList from "../HelloWorldList/HelloWorldList";
+import log from "../../utils/log";
 
 class TestRouteComponent extends Component {
   constructor(props) {

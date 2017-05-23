@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import HelloWorld from "./HelloWorld";
-import log from "./utils/log";
-import "./HelloWorldList.css";
 import Loader from "react-loader";
+import HelloWorld from "../HelloWorld/HelloWorld";
+import log from "../../utils/log";
+import "./HelloWorldList.css";
 
 class HelloWorldList extends Component {
 	constructor(props) {

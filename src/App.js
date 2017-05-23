@@ -1,9 +1,9 @@
 // import React, { Component } from "react";
 import React from "react";
 import "./App.css";
-import HelloWorldPage from "./HelloWorldPage";
-import TestRouteComponent from "./TestRouteComponent";
-import HeaderNavBar from "./HeaderNavBar";
+import HelloWorldPage from "./Components/HelloWorldPage/HelloWorldPage";
+import TestRouteComponent from "./Components/TestRouteComponent/TestRouteComponent";
+import HeaderNavBar from "./Components/HeaderNavBar/HeaderNavBar";
 import "react-router";
 import { Route, Switch } from "react-router-dom";
 

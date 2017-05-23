@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import log from "../../utils/log";
 import "./HelloWorld.css";
-import log from './utils/log';
 
 class HelloWorld extends Component {
 	constructor(props) {

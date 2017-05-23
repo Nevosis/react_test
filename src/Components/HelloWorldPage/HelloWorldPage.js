@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import HelloWorldList from "./HelloWorldList";
-import AddGreeter from "./AddGreeter";
-import log from "./utils/log";
+import HelloWorldList from "../HelloWorldList/HelloWorldList";
+import AddGreeter from "../AddGreeter/AddGreeter";
+import log from "../../utils/log";
 
 class HelloWorldPage extends Component {
 	constructor(props) {

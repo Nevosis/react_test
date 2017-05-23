@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 
-import HelloWorld from "./HelloWorld";
+import HelloWorld from "../Components/HelloWorld/HelloWorld";
 
 describe(HelloWorld, () => {
 	const name = "Person";

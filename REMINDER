@@ -8,6 +8,7 @@ Advices : Call db dans componentDidMount (apres le rendering);
 
 Best Practice : Ne pas utiliser setState (HEIN ? how the fuck ?) 
 
+Best Practice : Découpage Découpage Découpage, le découpage remplace la notion de service, micro component réutilisable, sans hiérarchisation.
 
 Request async :
 Axios ? 	https://medium.com/@hmovielabs/day-5-making-server-request-in-react-with-axios-8e85549caf62

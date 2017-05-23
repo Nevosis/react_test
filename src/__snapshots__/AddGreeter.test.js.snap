@@ -3,6 +3,55 @@
 exports[`class AddGreeter extends _react.Component {
 	constructor(props) {
 		super(props);
+		_log2.default.info("[AddGreeter] Constructor");
+		this.state = { greetingName: "" };
+		this.handleUpdate = this.handleUpdate.bind(this);
+		this.addGreeting = this.addGreeting.bind(this);
+	}
+
+	handleUpdate(e) {
+		this.setState({ greetingName: e.target.value });
+	}
+
+	addGreeting() {
+		this.props.addGreeting(this.state.greetingName);
+		this.setState({ greetingName: "" });
+	}
+
+	render() {
+		return (
+			_react2.default.createElement("div", { className: "AddGreeter", __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this },
+				_react2.default.createElement("input", {
+					type: "text",
+					onChange: this.handleUpdate,
+					value: this.state.greetingName, __source: { fileName: _jsxFileName, lineNumber: 26 }, __self: this }), "\\xA0\\xA0",
+
+
+				_react2.default.createElement("button", { onClick: this.addGreeting, disabled: this.props.disabled, __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: this }, "+++")));
+
+
+	}} renders and matches our snapshot 1`] = `
+<div
+  className="AddGreeter"
+>
+  <input
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+    
+  <button
+    disabled={undefined}
+    onClick={[Function]}
+  >
+    +++
+  </button>
+</div>
+`;
+
+exports[`class AddGreeter extends _react.Component {
+	constructor(props) {
+		super(props);
 		this.state = { greetingName: "" };
 		this.handleUpdate = this.handleUpdate.bind(this);
 		this.addGreeting = this.addGreeting.bind(this);

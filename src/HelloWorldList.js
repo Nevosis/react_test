@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import HelloWorld from "./HelloWorld";
-import AddGreeter from "./AddGreeter";
-import Log from "./utils/log";
+import log from "./utils/log";
 import "./HelloWorldList.css";
 import Loader from "react-loader";
 
 class HelloWorldList extends Component {
 	constructor(props) {
 		super(props);
-		Log.info("[HelloWorldList]constructor");
+		log.info("[HelloWorldList]constructor");
 
 		this.state = {
 			loaded: false,
@@ -20,7 +19,7 @@ class HelloWorldList extends Component {
 		this.removeGreeting = this.removeGreeting.bind(this);
 	}
 	componentDidMount() {
-		Log.info("[HelloWorldList]componentDidMount");
+		log.info("[HelloWorldList]componentDidMount");
 
 		// Fake Call db to test async and loader
 		setTimeout(
@@ -29,28 +28,25 @@ class HelloWorldList extends Component {
 					loaded: true,
 					greetings: ["Jim", "Sally", "Bob"]
 				});
+				// So loaded props isnt mandatory
+				if (this.props.loaded) this.props.loaded();
 			}.bind(this),
 			1000
 		);
 	}
 	addGreeting(newName) {
-		if (this.state.loaded) {
-			this.setState({ greetings: [...this.state.greetings, newName] });
-			return true;
-		} else {
-			return false;
-		}
+		this.setState({ greetings: [...this.state.greetings, newName] });
 	}
 	removeGreeting(removeName) {
-		// Recup un array SANS l'élément a remove
 		const filteredGreetings = this.state.greetings.filter(name => {
 			return name !== removeName;
 		});
 		this.setState({ greetings: filteredGreetings });
 	}
 	renderGreetings() {
-		return this.state.greetings.map(name => (
+		return this.state.greetings.map((name, index) => (
 			<HelloWorld
+				// key = name rend les noms unique. Possibilité de mettre index, mais doit etre passé a Helloworld en prop pour remonter la destruction (lourd et pas propre). Besoin d'un ID
 				key={name}
 				name={name}
 				removeGreeting={this.removeGreeting}

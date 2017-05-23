@@ -5,7 +5,7 @@ import log from './utils/log';
 class AddGreeter extends Component {
 	constructor(props) {
 		super(props);
-		log.info("[AddGreeter] Constructor")
+		log.info("[AddGreeter] Constructor");
 		this.state = { greetingName: "" };
 		this.handleUpdate = this.handleUpdate.bind(this);
 		this.addGreeting = this.addGreeting.bind(this);
@@ -29,7 +29,7 @@ class AddGreeter extends Component {
 					value={this.state.greetingName}
 				/>
 				&nbsp;&nbsp;
-				<button onClick={this.addGreeting}>+++</button>
+				<button onClick={this.addGreeting} disabled={this.props.disabled}>+++</button>
 			</div>
 		);
 	}

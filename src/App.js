@@ -15,7 +15,6 @@ const App = () => {
         <Route exact path="/" component={HelloWorldPage} />
         <Route path="/test" component={TestRouteComponent} />
       </Switch>
-
     </div>
   );
 };

@@ -11,7 +11,7 @@ class TestRouteComponent extends Component {
   render() {
     return (
       <div className="TestRouteComponent">
-        <HelloWorldList loaded={this.listLoaded} ref="HelloWorldListInstance" />
+        <HelloWorldList loaded={this.listLoaded} />
       </div>
     );
   }

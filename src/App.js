@@ -1,7 +1,7 @@
 // import React, { Component } from "react";
 import React from "react";
 import "./App.css";
-import HelloWorldList from "./HelloWorldList";
+import HelloWorldPage from "./HelloWorldPage";
 import TestRouteComponent from "./TestRouteComponent";
 import HeaderNavBar from "./HeaderNavBar";
 import "react-router";
@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <HeaderNavBar />
       <Switch>
-        <Route exact path="/" component={HelloWorldList} />
+        <Route exact path="/" component={HelloWorldPage} />
         <Route path="/test" component={TestRouteComponent} />
       </Switch>
 

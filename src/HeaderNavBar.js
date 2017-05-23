@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
-import { LinkContainer } from 'react-router-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
+import log from './utils/log';
 
 class HeaderNavBar extends Component {
   constructor(props) {
     super(props);
+    log.info("[HeaderNavBar] Constructor");
   }
 
   render() {

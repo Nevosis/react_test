@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./AddGreeter.css";
+import log from './utils/log';
 
 class AddGreeter extends Component {
 	constructor(props) {
 		super(props);
+		log.info("[AddGreeter] Constructor")
 		this.state = { greetingName: "" };
 		this.handleUpdate = this.handleUpdate.bind(this);
 		this.addGreeting = this.addGreeting.bind(this);

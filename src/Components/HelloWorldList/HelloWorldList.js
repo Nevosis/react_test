@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Loader from "react-loader";
 import HelloWorld from "../HelloWorld/HelloWorld";
+import userDao from "../../dao/user.dao";
 import log from "../../utils/log";
 import "./HelloWorldList.css";
 
@@ -22,17 +23,13 @@ class HelloWorldList extends Component {
 		log.info("[HelloWorldList]componentDidMount");
 
 		// Fake Call db to test async and loader
-		setTimeout(
-			function() {
-				this.setState({
-					loaded: true,
-					greetings: ["Jim", "Sally", "Bob"]
-				});
-				// So loaded props isnt mandatory
-				if (this.props.loaded) this.props.loaded();
-			}.bind(this),
-			1000
-		);
+		userDao.getUsers().then((users) => {
+			this.setState({
+				loaded: true,
+				greetings: users
+			});
+			if (this.props.loaded) this.props.loaded();
+		});
 	}
 	addGreeting(newName) {
 		this.setState({ greetings: [...this.state.greetings, newName] });

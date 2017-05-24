@@ -7,7 +7,7 @@ This project was made thanks to [Brandon Richey tutorial](https://medium.com/@di
 [Part3](https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-3-322447d14192)<br>
 [Part4](https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-4-9f843c8c1ccc)
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).<br>
 [Create React GUIDE](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
 
 

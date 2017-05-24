@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import userDao from "../../dao/user.dao";
 import log from "../../utils/log";
 import "./AddGreeter.css";
 
@@ -16,8 +17,10 @@ class AddGreeter extends Component {
 	}
 
 	addGreeting() {
-		this.props.addGreeting(this.state.greetingName);
-		this.setState({ greetingName: "" });
+		userDao.addUser(this.state.greetingName).then(() => {
+			this.props.addGreeting(this.state.greetingName);
+			this.setState({ greetingName: "" });
+		});
 	}
 
 	render() {
@@ -29,7 +32,12 @@ class AddGreeter extends Component {
 					value={this.state.greetingName}
 				/>
 				&nbsp;&nbsp;
-				<button onClick={this.addGreeting} disabled={this.props.disabled}>+++</button>
+				<button
+					onClick={this.addGreeting}
+					disabled={this.props.disabled}
+				>
+					+++
+				</button>
 			</div>
 		);
 	}

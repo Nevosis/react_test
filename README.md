@@ -1,3 +1,5 @@
+/!\ This is my first react test. It is only about react, not data (flux/redux) or style /!\
+
 This project was made thanks to [Brandon Richey tutorial](https://medium.com/@diamondgfx) (part 1 to 4) :
 
 [Part1](https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc)<br>

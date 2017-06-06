@@ -1,19 +1,39 @@
 import { configLog } from "./config";
 //FLUTTERSHY : https://vignette4.wikia.nocookie.net/mlp/images/d/d6/Fluttershy_ID_S1E17.png
+
 var log = {
-	info(message) {
-		if (configLog.info) console.info(message);
-	},
-	log(message) {
-		console.log(console);
-		if (configLog.log) console.log(message);
-	},
-	warn(message) {
-		if (configLog.warn) console.warn(message);
-	},
-	error(message) {
-		if (configLog.error) console.error(message);
-	}
+	info: (function() {
+		if (!window.console || !console.info) {
+			return;
+		}
+		if (configLog.info)
+			return Function.prototype.bind.call(console.info, console);
+		return function() {};
+	})(),
+	log: (function() {
+		if (!window.console || !console.log) {
+			return;
+		}
+		if (configLog.log)
+			return Function.prototype.bind.call(console.log, console);
+		return function() {};
+	})(),
+	warn: (function() {
+		if (!window.console || !console.warn) {
+			return;
+		}
+		if (configLog.warn)
+			return Function.prototype.bind.call(console.warn, console);
+		return function() {};
+	})(),
+	error: (function() {
+		if (!window.console || !console.error) {
+			return;
+		}
+		if (configLog.warn)
+			return Function.prototype.bind.call(console.error, console);
+		return function() {};
+	})()
 };
 
 export default log;
